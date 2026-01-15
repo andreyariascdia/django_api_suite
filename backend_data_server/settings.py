@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-9(!@q=8+62xo-qa1jo5_x2c9o-%&!cp%wwu^4z160qjbqpz2ee
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aarias.pythonanywhere.com']
 
 
 # Application definition
@@ -127,6 +127,7 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, STATIC_URL),
 ]
+STATIC_ROOT = "assets/"
 
 # Coloque la ruta relativa al archivo con la clave privada
 FIREBASE_CREDENTIALS_PATH = credentials.Certificate("secrets/landing-key.json")
