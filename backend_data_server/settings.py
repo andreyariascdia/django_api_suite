@@ -130,8 +130,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = "assets/"
 
 # Coloque la ruta relativa al archivo con la clave privada
-FIREBASE_CREDENTIALS_PATH = credentials.Certificate("secrets/landing-key.json")
-
+FIREBASE_CREDENTIALS_PATH = credentials.Certificate(os.path.join(BASE_DIR, 'secrets', 'landing-key.json'))
 # Inicialice la conexión con el Realtime Database con la clave privada y la URL de referencia
 firebase_admin.initialize_app(FIREBASE_CREDENTIALS_PATH, {
    'databaseURL': 'https://landing-567fd-default-rtdb.firebaseio.com/'
